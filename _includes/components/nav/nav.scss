@@ -1,0 +1,44 @@
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.25rem 0.5rem;
+	gap: 0.5rem;
+	text-transform: lowercase;
+	background: var(--color-text);
+	border: var(--border-width) solid var(--color-text);
+	position: sticky;
+	top: 0.5rem;
+	margin-bottom: calc(-1 * var(--border-width));
+	z-index: 2;
+
+	a {
+		color: var(--color-background);
+	}
+	&:after {
+		content: '';
+		position: fixed;
+		width: 100%;
+		height: 0.5rem;
+		top: 0;
+		left: 0;
+		background: var(--color-background);
+		z-index: 1;
+	}
+	.divider {
+		display: inline-block;
+		margin: 0 0.25rem;
+		color: var(--color-ui-muted);
+	}
+}
+.nav-list {
+	font-size: 0.8rem;
+}
+
+.site-logo {
+	svg {
+		max-width: unset;
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+}

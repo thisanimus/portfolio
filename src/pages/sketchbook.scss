@@ -1,0 +1,76 @@
+.masonry {
+	columns: 1;
+	column-gap: var(--space-sm);
+}
+.masonry-item {
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	margin-bottom: var(--space-sm);
+	background: #fff;
+	padding: var(--space-sm);
+	//border: var(--border-width) solid var(--color-text);
+}
+@media only screen and (min-width: 600px) {
+	.masonry {
+		columns: 2;
+	}
+}
+@media only screen and (min-width: 900px) {
+	.masonry {
+		columns: 3;
+	}
+}
+
+.frame {
+	background: var(--color-text);
+	padding: var(--border-width);
+	display: grid;
+	gap: var(--border-width);
+	grid-template-columns: 1fr max-content max-content;
+	grid-template-areas:
+		'title title title' 'subtitle created modified'
+		'content content content';
+
+	> * {
+		margin: 0;
+		background: var(--color-background);
+		padding: var(--space-sm);
+	}
+	.title {
+		grid-area: title;
+		padding-right: 0;
+		h1 {
+			font-size: clamp(9rem, 6rem + 5vw, 14rem);
+			text-transform: lowercase;
+			font-weight: 900;
+			line-height: 1;
+			margin: 0.25em 0 0 0;
+			letter-spacing: -0.05em;
+			text-overflow: clip;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+	.subtitle {
+		grid-area: subtitle;
+		font-weight: 600;
+		h2 {
+			font-size: 1.2rem;
+			font-weight: 600;
+			//margin: 0;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.created {
+		grid-area: created;
+	}
+	.modified {
+		grid-area: modified;
+	}
+	.content {
+		grid-area: content;
+	}
+}

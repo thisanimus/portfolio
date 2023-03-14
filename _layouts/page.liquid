@@ -1,0 +1,34 @@
+---
+layout: base.liquid
+---
+<div class="frame">
+	<header class="title">
+		<h1>{{title}}</h1>
+	</header>
+	<div class="subtitle">
+		<h2>
+			{{ subtitle }}
+		</h2>
+    <p>{{ description }}</p>
+	</div>
+	<div class="date created">
+		{{ created }}
+	</div>
+		<div class="date modified">
+		{{ modified }}
+	</div>
+
+	<div class="metadata">
+		<ul class="metadata-list">
+      {% for item in metadata %}
+        <li>
+          <div class="label">{{ item.label }}</div>
+          <div class="value">{{ item.value }}</div>
+        </li>
+      {%  endfor %}
+    </ul>
+	</div>
+	<main class="content">
+		{{ content }}
+	</main>
+</header>

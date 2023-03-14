@@ -1,0 +1,43 @@
+---
+layout: page.liquid
+title: Sketchbook
+subtitle: 24 Images
+description: I like to draw, but I don't do it as often as I'd like to.  Drawing is the quickest way to get visual information out of my mind into the real world.
+created: 2019-04-01
+modified: Last Modified
+
+images:
+- 2019-tired.jpg
+- 2018-sound-2.jpg
+- 2018-skull.jpg
+- 2018-madonna.jpeg
+- 2017-cello-lg.jpg
+- 2016-worn-knees.jpg
+- 2016-rebirth.jpg
+- 2014-metamorphose.jpg
+- 2012-over-the-shoulder.jpg
+- 2012-facade.jpg
+- 2012-facade-little-italy.jpg
+- 2011-tea-house2.jpg
+- 2011-tea-house-3.jpg
+- 2011-tea-house-1.jpg
+- 2011-little-itlay-04.jpg
+- 2011-little-italy-05.jpg
+- 2011-little-italy-02.jpg
+- 2011-little-italy-1.jpg
+- 2010-lamp.jpg
+- 2010-kimbell-4.jpg
+- 2010-kimbell-2.jpg
+- 2010-kimbell-1.jpg
+- 2009-escherick-house.jpg
+- 2007-violin.jpg
+---
+
+<div class="masonry">
+	{% for image in images %}
+		<div class="masonry-item">
+			{% image image, 'alt', 'sketchbook-image' %}
+		</div>
+	{% endfor %}
+</div>
+
